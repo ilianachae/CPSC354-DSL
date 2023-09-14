@@ -54,6 +54,7 @@ ii_nn n = II n O
 
 -- cast numbers of type PP to numbers of type II
 ii_pp :: PP -> II
+ii_pp p = II (nn_pp p) O
 
 ----------------
 -- NN Arithmetic
