@@ -50,6 +50,7 @@ nn_pp (T m) = S (nn_pp m)
 
 -- cast numbers of type NN to numbers of type II
 ii_nn :: NN -> II
+ii_nn n = II n O
 
 -- cast numbers of type PP to numbers of type II
 ii_pp :: PP -> II
