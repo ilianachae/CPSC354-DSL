@@ -44,6 +44,8 @@ multP (T m) n = addP n (multP m n)
 
 -- cast numbers of type PP as numbers of type NN
 nn_pp :: PP -> NN
+nn_pp I = S O
+nn_pp (T m) = S (nn_pp m)
 
 -- cast numbers of type NN to numbers of type II
 ii_nn :: NN -> II
