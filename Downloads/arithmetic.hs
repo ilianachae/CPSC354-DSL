@@ -99,7 +99,7 @@ multQ :: QQ -> QQ -> QQ
 
 -- Equality of fractions
 instance Eq QQ where
-  (QQ a b) == (QQ c d) = <insert your code here>
+  (QQ a b) == (QQ c d) = (multI a (ii_pp d)) == (multI c (ii_pp b))
 
 ----------------
 -- Normalisation
