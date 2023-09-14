@@ -75,12 +75,18 @@ multN (S n) m = addN (multN n m) m
 
 -- Precondition: Inputs are non-negative
 nn_int :: Integer -> NN
+nn_int 0 = O
+nn_int n = S (nn_int (n-1))
 
-int_nn :: NN->Integer
+int_nn :: NN -> Integer
+int_nn O = 0
+int_nn (S n) = 1 + int_nn n
 
 ii_int :: Integer -> II
+ii_int n = II (nn_int n) O
 
 int_ii :: II -> Integer
+int_ii (II n m) = int_nn n - int_nn m
 
 -- Precondition: Inputs are positive
 pp_int :: Integer -> PP
