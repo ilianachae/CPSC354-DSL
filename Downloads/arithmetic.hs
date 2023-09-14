@@ -81,8 +81,7 @@ multN (S n) m = addN (multN n m) m
 -- Addition
 -- (a-b)+(c-d)=(a+c)-(b+d)
 addI :: II -> II -> II
-addI O a = a
-addI 
+addI (II a b) (II c d) = II (addN a c) (addN b d)
 
 -- Multiplication
 multI :: II -> II -> II
