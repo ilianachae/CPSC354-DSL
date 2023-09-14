@@ -90,10 +90,15 @@ int_ii (II n m) = int_nn n - int_nn m
 
 -- Precondition: Inputs are positive
 pp_int :: Integer -> PP
+pp_int 1 = I
+pp_int n = T (pp_int (n-1))
 
-int_pp :: PP->Integer
+int_pp :: PP -> Integer
+int_pp I = 1
+int_pp (T p) = 1 + int_pp p
 
 float_qq :: QQ -> Float
+float_qq (QQ ii pp) = fromIntegral (int_ii ii) / fromIntegral (int_pp pp)
 -- use fromIntegral to convert from Integer to Float
 
 ----------
