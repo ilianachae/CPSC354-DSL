@@ -28,10 +28,10 @@ data QQ =  QQ II PP
 ----------------
 -- PP Arithmetic
 ----------------
--- add positive numbers
-addP :: PP -> PP -> PP 
-addP I m = T m
-addP (T m) n = T (addP m n)
+-- multiply positive numbers
+multP :: PP -> PP -> PP
+multP I m = m
+multP (T m) n = addP n (multP m n)
 
 ---------------
 -- TYPECASTINGS
