@@ -84,7 +84,9 @@ addI :: II -> II -> II
 addI (II a b) (II c d) = II (addN a c) (addN b d)
 
 -- Multiplication
+-- (a-b)*(c-d)=(ac+bd)-(ad+bc)
 multI :: II -> II -> II
+multI (II a b) (II c d) = II (addN (multN a c) (multN b d)) (addN (multN a d) (multN b c))
 
 -- Negation
 -- negI :: II -> II
