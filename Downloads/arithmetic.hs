@@ -28,6 +28,11 @@ data QQ =  QQ II PP
 ----------------
 -- PP Arithmetic
 ----------------
+-- add positive numbers
+addP :: PP -> PP -> PP 
+addP I m = T m
+addP (T m) n = T (addP m n)
+
 -- multiply positive numbers
 multP :: PP -> PP -> PP
 multP I m = m
@@ -38,13 +43,13 @@ multP (T m) n = addP n (multP m n)
 ---------------
 
 -- cast numbers of type PP as numbers of type NN
-nn_pp :: PP -> NN
+-- nn_pp :: PP -> NN
 
 -- cast numbers of type NN to numbers of type II
-ii_nn :: NN -> II
+-- ii_nn :: NN -> II
 
 -- cast numbers of type PP to numbers of type II
-ii_pp :: PP -> II
+-- ii_pp :: PP -> II
 
 ----------------
 -- NN Arithmetic
@@ -61,13 +66,13 @@ multN O m = O
 multN (S n) m = addN (multN n m) m
 
 -- division, eg 13 divided by 5 is 2 
-divN :: NN -> PP -> NN
+-- divN :: NN -> PP -> NN
 
 -- remainder, eg 13 modulo by 5 is 3
-modN :: NN -> PP -> NN
+-- modN :: NN -> PP -> NN
 
 -- greatest common divisor, eg gcd 9 33 is 3
-gcdP :: PP -> PP -> PP
+-- gcdP :: PP -> PP -> PP
 
 ----------------
 -- II Arithmetic
@@ -76,12 +81,14 @@ gcdP :: PP -> PP -> PP
 -- Addition
 -- (a-b)+(c-d)=(a+c)-(b+d)
 addI :: II -> II -> II
+addI O a = a
+addI 
 
 -- Multiplication
 multI :: II -> II -> II
 
 -- Negation
-negI :: II -> II
+-- negI :: II -> II
 
 -- Equality of integers
 instance Eq II where
@@ -92,10 +99,10 @@ instance Eq II where
 ----------------
 
 -- Addition
-addQ :: QQ -> QQ -> QQ
+-- addQ :: QQ -> QQ -> QQ
 
 -- Multiplication:
-multQ :: QQ -> QQ -> QQ
+-- multQ :: QQ -> QQ -> QQ
 
 -- Equality of fractions
 instance Eq QQ where
@@ -105,28 +112,9 @@ instance Eq QQ where
 -- Normalisation
 ----------------
 
-nbe :: II -> II
-
 ----------------------------------------------------
 -- Converting between VM-numbers and Haskell-numbers
 ----------------------------------------------------
-
--- Precondition: Inputs are non-negative
-nn_int :: Integer -> NN
-
-int_nn :: NN->Integer
-
-ii_int :: Integer -> II
-
-int_ii :: II -> Integer
-
--- Precondition: Inputs are positive
-pp_int :: Integer -> PP
-
-int_pp :: PP->Integer
-
-float_qq :: QQ -> Float
--- use fromIntegral to convert from Integer to Float
 
 ----------
 -- Testing
@@ -137,7 +125,7 @@ main = do
     putStr "addN:  "; print $ int_nn (addN (nn_int 3) (nn_int 4)) -- 7 
     putStr "multN: "; print $ int_nn (multN (nn_int 3) (nn_int 4)) -- 12
     putStr "addP:  "; print $ int_pp (addP (pp_int 5) (pp_int 3)) -- 8
-
+    putStr "multP: "; print $ int_pp (multP (pp_int 5) (pp_int 6)) -- 30
 
 
 
