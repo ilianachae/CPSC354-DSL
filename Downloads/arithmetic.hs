@@ -43,13 +43,13 @@ multP (T m) n = addP n (multP m n)
 ---------------
 
 -- cast numbers of type PP as numbers of type NN
--- nn_pp :: PP -> NN
+nn_pp :: PP -> NN
 
 -- cast numbers of type NN to numbers of type II
--- ii_nn :: NN -> II
+ii_nn :: NN -> II
 
 -- cast numbers of type PP to numbers of type II
--- ii_pp :: PP -> II
+ii_pp :: PP -> II
 
 ----------------
 -- NN Arithmetic
@@ -86,8 +86,6 @@ addI (II a b) (II c d) = II (addN a c) (addN b d)
 -- Multiplication
 -- (a-b)*(c-d)=(ac+bd)-(ad+bc)
 multI :: II -> II -> II
-multI (II O _) _ = II O O
-multI _ (II O _) = II O O
 multI (II a b) (II c d) = II (addN (multN a c) (multN b d)) (addN (multN a d) (multN b c))
 
 -- Negation
