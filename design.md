@@ -46,3 +46,5 @@
 * Convert between mass and moles of a substance
 * Could add enthalpy calculations in the future
 * Could add PVnRT options in the future
+
+![Visual](preliminary_design_visual-1.png)
