@@ -48,4 +48,4 @@
 * Could add PVnRT options in the future
 
 ## Visualization
-![visual](preliminary_design_visual.png)
+![visualization](preliminaryDesign.png)
