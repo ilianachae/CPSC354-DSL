@@ -29,10 +29,18 @@
         <!-- Load Blockly into the workspace container -->
         <script>
             document.addEventListener("DOMContentLoaded", function() {
-                // Initialize Blockly workspace
-                var workspace = Blockly.inject('blocklyDiv', {
-                    toolbox: document.getElementById('toolbox') // Optional: Define toolbox with custom blocks
-                });
+                // Load the toolbox XML file
+                fetch('toolbox.xml')
+                    .then(response => response.text())
+                    .then(text => {
+                        // Parse the XML text
+                        const toolbox = Blockly.Xml.textToDom(text);
+                        // Initialize Blockly workspace
+                        var workspace = Blockly.inject('blocklyDiv', {
+                            toolbox: toolbox
+                        });
+                    })
+                    .catch(error => console.error('Error:', error));
             });
         </script>
     </body>
