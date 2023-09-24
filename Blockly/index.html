@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>General Chemistry DSL</title>
+        <!-- Include Blockly library -->
+        <script src="https://unpkg.com/blockly/blockly_compressed.js"></script>
+        <!-- Custom block definitions -->
+        <script src="block_definitions.js"></script>
+        <!-- Include JavaScript functions -->
+        <!-- script src="chemistry_functions.js"></script> -->
+        <!-- Include generator stubs -->
+        <script src="generator_stubs.js"></script>
+        <style>
+            /* Style the Blockly workspace container */
+            #blocklyDiv {
+                height: 400px;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>General Chemistry DSL</h1>
+
+        <!-- Blockly workspace container -->
+        <div id="blocklyDiv"></div>
+    
+        <!-- Load Blockly into the workspace container -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // Initialize Blockly workspace
+                var workspace = Blockly.inject('blocklyDiv', {
+                    toolbox: document.getElementById('toolbox') // Optional: Define toolbox with custom blocks
+                });
+            });
+        </script>
+    </body>
+</html>
