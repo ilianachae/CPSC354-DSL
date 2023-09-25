@@ -114,3 +114,29 @@
 ![visualization](preliminaryDesignVisual.png)
 
 # Description of Data the Project Needs to Maintain or Interact With
+* Data regarding the chemical information of each element needs to be accessible to the project.
+* Mainly want access to for the scope of this design:
+    * atomic number
+    * symbol
+    * name
+    * atomic mass
+* Other information is available on the periodic table elements API:
+    * electronicConfiguration
+    * electronegativity
+    * atomicRadius
+    * ionRadius
+    * vanDerWaalsRadius
+    * ionizationEnergy
+    * electronAffinity
+    * oxidationStates
+    * standardState
+    * bondingType
+    * meltingPoint
+    * boilingPoint
+    * density
+    * groupBlock
+    * yearDiscovered
+    * block
+    * cpkHexColor
+    * period
+
