@@ -1,4 +1,4 @@
-# Reference
+# References
 1. [Dr. Kurz's Blockly Lamda Calculus](https://github.com/alexhkurz/BlocklyLambdaCalculus/tree/main) - Provides an example blockly demo where a user can take blocks out of the toolbox and piece them together to create basic lambda calculus programs.
 
 2. [Blockly Program for JavaScript](https://github.com/google/blockly) - Blockly gitHub repository containing documentation and examples of blockly programs.
