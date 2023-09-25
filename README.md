@@ -12,5 +12,5 @@ We will be creating this project in Blockly. In this Blockly-based interface, us
 The creation of chemical equations would be performed through parsing of the blocks. Just as in code where a parser would analyze a string of input and separate it into the language relevant components, the parsing here would anaylze the blocks used to create the chemical equations and determine which elements and molecules are involved, how many of each element and molecule is involved, and the type of equation that is being created. Interpretation of those blocks would be done to perform operations and maintain the logic of chemistry by transforming the block-based representation of chemiscal equations into the desired chemical operations. In the case of interpretation, the blocks would be similar to a high-level language.
 
 ## Blockly Demo Link
-We're currently having trouble managing the conversion of blockly code to js but we managed to make some blocks although in the demo you can't really interact with them yet to customize inputs
-[Demo](https://jadensuh.github.io/)
+We're currently having trouble managing the conversion of blockly code to js but we managed to make some blocks although in the demo you can't really interact with them yet to customize inputs\
+[Demo Link](https://jadensuh.github.io/)
