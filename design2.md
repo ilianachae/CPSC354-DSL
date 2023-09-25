@@ -115,6 +115,7 @@
 
 # Description of Data the Project Needs to Maintain or Interact With
 * Data regarding the chemical information of each element needs to be accessible to the project.
+* Project accesses information of elements when requested by the user through the element information block and when performing stoichiometric calculations on the elements.
 * Mainly want access to for the scope of this design:
     * atomic number
     * symbol
@@ -139,4 +140,8 @@
     * block
     * cpkHexColor
     * period
+* Basic compound information such as molecular formula and molecular mass can be determined from its elements. However, would need to create a database or interact with a database to provide more specific information.
 
+# Use Case for a Recursive Blockly Program
+* A general example could be selected from numerous mathematical applications. For example, implementing a recursive modulo program in blockly would allow users to find the remainder upon the division of any two real numbers. The modulo operator is also often used in code for more complex calculations. A greatest common denominator function for example could be build using a recursive modulo program. The modulo block could be used in other programs as well, allowing for the creation of infinitely complex programs.
+* The preliminary design allows for recusion of chemical elements to build complex molecules. Elements and compounds can be added together with other elements and compounds using the compound block infinitely as they can be nested within one another. These macromolecules can then recursively broken down back into its elements.
