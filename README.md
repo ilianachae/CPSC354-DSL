@@ -14,3 +14,7 @@ The creation of chemical equations would be performed through parsing of the blo
 ## Blockly Demo Link
 We're currently having trouble managing the conversion of blockly code to js but we managed to make some blocks although in the demo you can't really interact with them yet to customize inputs\
 [Demo Link](https://jadensuh.github.io/)
+
+For testing the program and fixing some minor issues of the program, we are working on the demo program at [Public Git Repository of Demo Program](https://github.com/JadenSuh/JadenSuh.github.io).
+
+We are going to move the program after we fixed some issues.
