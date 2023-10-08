@@ -20,7 +20,7 @@ body, html {
 .half-width {
     width: 49%;
     height: 200px;
-    border: 1px solid black;
+    border: 10px solid rgb(190, 26, 26);
     padding: 10px;
     overflow: auto;
 }
