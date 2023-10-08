@@ -16,10 +16,10 @@ Blockly.Blocks['element_symbol'] = {
 Blockly.Blocks['element_coefficient'] = {
 	init: function() {
 		this.appendValueInput("COEFFICIENT")
-		  .setCheck("Element, Compound")
+		  .setCheck("Element)
 		  .appendField(new Blockly.FieldNumber(2, 2), "NUMBER");
 		this.setInputsInline(true);
-		this.setOutput(true, "Compound");
+		this.setOutput(true, "Element");
 		this.setColour(180);
 		this.setTooltip("Type the coefficient for the number the inserted element");
 		this.setHelpUrl("");
