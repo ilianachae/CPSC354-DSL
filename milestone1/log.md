@@ -1,9 +1,9 @@
 # CPSC354-DSL Work Logs
 
 ## Group Members
-Iliana Chae
-Andrew Kwon
-Jaden Suh
+* Iliana Chae
+* Andrew Kwon
+* Jaden Suh
 
 ## Work Logs
 ### Iliana Chae
