@@ -7,7 +7,7 @@
 
 ## Work Logs
 ### Iliana Chae
-* [Contribution 1](Link Here)
+* Bugfixing for program blocks in [custom_blocks.js](https://github.com/ilianachae/CPSC354-DSL/blob/main/milestone1/design-blocks/custom_blocks.js)
 * [Contribution 2](Link Here)
  
 ### Andrew Kwon
