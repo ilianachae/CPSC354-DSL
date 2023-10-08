@@ -3,7 +3,7 @@
 Blockly.Blocks['element_symbol'] = {
 	init: function() {
 		this.appendDummyInput()
-		  .appendField("Element Symbol: ") /* Name that appears on block piece */
+		  .appendField("Element: ") /* Name that appears on block piece */
 		  .appendField(new Blockly.FieldTextInput("H"), "NAME");
 		this.setInputsInline(true, "String");
 		this.setOutput(true, "Element"); /* output type to allow block connections */
@@ -16,10 +16,10 @@ Blockly.Blocks['element_symbol'] = {
 Blockly.Blocks['element_coefficient'] = {
 	init: function() {
 		this.appendValueInput("COEFFICIENT")
-		  .setCheck("Element")
-		  .appendField(new Blockly.FieldNumber(1, 1), "NUMBER");
+		  .setCheck("Element, Compound")
+		  .appendField(new Blockly.FieldNumber(2, 2), "NUMBER");
 		this.setInputsInline(true);
-		this.setOutput(true, "Element");
+		this.setOutput(true, "Compound");
 		this.setColour(180);
 		this.setTooltip("Type the coefficient for the number the inserted element");
 		this.setHelpUrl("");
@@ -84,12 +84,7 @@ Blockly.JavaScript['element_symbol'] = function(block) {
 Blockly.JavaScript['element_coefficient'] = function(block) {
 	var num = block.getFieldValue('NUMBER');
 	var ele_name = Blockly.JavaScript.valueToCode(block, 'COEFFICIENT', Blockly.JavaScript.ORDER_NONE);
-	var code;
-	if (num === '1') {
-		code = ele_name;
-	} else {
-		code = num + ele_name;
-	}
+	var code = num + ele_name;
   	return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
