@@ -19,7 +19,7 @@ Blockly.Blocks['element_coefficient'] = {
 		  .setCheck(["Element", "Compound"])
 		  .appendField(new Blockly.FieldNumber(2, 2), "NUMBER");
 		this.setInputsInline(true);
-		this.setOutput(true, "Element");
+		this.setOutput(true, "Compound");
 		this.setColour(180);
 		this.setTooltip("Type the coefficient for the number the inserted element");
 		this.setHelpUrl("");
