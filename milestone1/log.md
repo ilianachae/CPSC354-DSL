@@ -12,7 +12,7 @@
  
 ### Andrew Kwon
 * Bugfixing for program blocks in [custom_blocks.js](https://github.com/ilianachae/CPSC354-DSL/blob/main/milestone1/design-blocks/custom_blocks.js)
-* Updated on How to Run and Test [README.md]([Link Here](https://github.com/ilianachae/CPSC354-DSL/blob/main/milestone1/README.md))
+* Updated on How to Run and Test [README.md](https://github.com/ilianachae/CPSC354-DSL/blob/main/milestone1/README.md)
 
 ### Jaden Suh
 * Assigned project tasks to group members 
