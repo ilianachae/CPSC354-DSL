@@ -42,6 +42,10 @@ The program uses JavaScript variables and functions to implement the equation of
 9. Insert the first reactants/products block into the left hole of the equation block.
 10. Insert the second reactants/products block into the right hole of the equation block.
 11. You've just created the equation for the combustion of methane! CH4 + 2 O2 => CO2 + 2 H2O represented as (C4(H)) + (2(2(O))) => (C2(O)) + (2(2(H)O));
+
+### Generating and Saving Code
+* The Generate Code button generates the code that represents the contents of the blockly workspace.
+* The Save Code button generates code and allows the user to download and save it as a javascript file to a location of their choosing.
  
 
 
