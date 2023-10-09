@@ -1,4 +1,6 @@
 # CPSC354-DSL Milestone 1
+For this milestone, we focused on the user prompt blocks to allow users to create and see the elements, compounds and equations that they create.
+For the next milestone, we will focus on the functional blocks to perform actions on the user-created blocks.
 
 ## Demo Link
 Go to [Demo Site](https://ilianachae.github.io/CPSC354-DSL/)
