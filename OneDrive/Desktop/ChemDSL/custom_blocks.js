@@ -185,3 +185,41 @@ function countElements(equation) {
     products: productCounts
   };
 }
+Blockly.Blocks['balance_equation'] = {
+  init: function() {
+    this.appendValueInput("EQUATION")
+      .setCheck("EquationOutput")
+      .appendField("Balance equation:");
+    this.setInputsInline(true);
+    this.setOutput(true, "EquationOutput");
+    this.setColour(230);
+    this.setTooltip("Balance a chemical equation");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.JavaScript['balance_equation'] = function(block) {
+  var equation = Blockly.JavaScript.valueToCode(block, 'EQUATION', Blockly.JavaScript.ORDER_ATOMIC);
+  var counts = countElements(equation);
+  var reactants = counts.reactants;
+  var products = counts.products;
+
+  // Check if the equation is balanced
+  var isBalanced = true;
+  for (var element in reactants) {
+    if (reactants[element] !== products[element]) {
+      isBalanced = false;
+      break;
+    }
+  }
+
+  // Output the balanced equation or a message indicating that the equation is not balanced
+  var code;
+  if (isBalanced) {
+    code = JSON.stringify({equation: equation});
+  } else {
+    code = 'The equation is not balanced.';
+  }
+
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
+};
