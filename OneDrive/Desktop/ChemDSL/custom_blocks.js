@@ -205,20 +205,19 @@ Blockly.JavaScript['balance_equation'] = function(block) {
   var products = counts.products;
 
   // Check if the equation is balanced
-  var isBalanced = true;
+  var unbalancedElements = [];
   for (var element in reactants) {
     if (reactants[element] !== products[element]) {
-      isBalanced = false;
-      break;
+      unbalancedElements.push(element);
     }
   }
 
-  // Output the balanced equation or a message indicating that the equation is not balanced
+  // Output the balanced equation or a message indicating which elements are not balanced
   var code;
-  if (isBalanced) {
+  if (unbalancedElements.length === 0) {
     code = JSON.stringify({equation: equation});
   } else {
-    code = 'The equation is not balanced.';
+    code = 'The equation is not balanced. Unbalanced elements: ' + unbalancedElements.join(', ');
   }
 
   return [code, Blockly.JavaScript.ORDER_ATOMIC];
