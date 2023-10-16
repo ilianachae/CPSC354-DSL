@@ -150,3 +150,38 @@ var workspaceBlocks = document.getElementById("toolbox");
 
 Blockly.Xml.domToWorkspace(workspaceBlocks, workspace);
 */
+function countElements(equation) {
+  var sides = equation.split('=>');
+  var reactants = sides[0].split('+');
+  var products = sides[1].split('+');
+
+  var reactantCounts = {};
+  var productCounts = {};
+
+  reactants.forEach(function(reactant) {
+    var elements = reactant.match(/[A-Z][a-z]*/g);
+    elements.forEach(function(element) {
+      if (reactantCounts[element]) {
+        reactantCounts[element]++;
+      } else {
+        reactantCounts[element] = 1;
+      }
+    });
+  });
+
+  products.forEach(function(product) {
+    var elements = product.match(/[A-Z][a-z]*/g);
+    elements.forEach(function(element) {
+      if (productCounts[element]) {
+        productCounts[element]++;
+      } else {
+        productCounts[element] = 1;
+      }
+    });
+  });
+
+  return {
+    reactants: reactantCounts,
+    products: productCounts
+  };
+}
