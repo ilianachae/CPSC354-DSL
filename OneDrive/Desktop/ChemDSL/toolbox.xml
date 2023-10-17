@@ -20,4 +20,7 @@
       </value>
     </block>
   </category>
+  <category name="Equation Functions">
+    <block type="balance_equation">
+  </category>
 </xml>

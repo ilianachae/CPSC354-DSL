@@ -73,6 +73,19 @@ Blockly.Blocks['chemical_equation'] = {
 	}
 };
 
+Blockly.Blocks['balance_equation'] = {
+	init: function() {
+		this.appendValueInput("BALANCEDEQUATION")
+			.setCheck("EquationOutput")
+			.appendField("EQ Balance");
+		this.setInputsInline(true);
+		this.setPreviousStatement(true, "ChemFunction");
+		this.setColour(230);
+		this.setTooltip("Insert a chemical equation to check for balance");
+		this.setHelpUrl("");
+	}
+};
+
 /* Code Generator Functions */
 
 Blockly.JavaScript['element_symbol'] = function(block) {
@@ -120,6 +133,31 @@ Blockly.JavaScript['chemical_equation'] = function(block) {
   var equation = reactants + ' ' + equationType + ' ' + products;
   
   return [equation, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['balance_equation'] = function(block) {
+  var equation = Blockly.JavaScript.valueToCode(block, 'EQUATION', Blockly.JavaScript.ORDER_ATOMIC);
+  var counts = countElements(equation);
+  var reactants = counts.reactants;
+  var products = counts.products;
+
+  // Check if the equation is balanced
+  var unbalancedElements = [];
+  for (var element in reactants) {
+    if (reactants[element] !== products[element]) {
+      unbalancedElements.push(element);
+    }
+  }
+
+  // Output the balanced equation or a JavaScript object indicating which elements are not balanced
+  var code;
+  if (unbalancedElements.length === 0) {
+    code = '{equation: "' + equation + '"}';
+  } else {
+    code = '{error: "The equation is not balanced. Unbalanced elements: ' + unbalancedElements.join(', ') + '"}';
+  }
+
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
 /* Put more custom blocks here */
@@ -185,40 +223,3 @@ function countElements(equation) {
     products: productCounts
   };
 }
-Blockly.Blocks['balance_equation'] = {
-  init: function() {
-    this.appendValueInput("EQUATION")
-      .setCheck("EquationOutput")
-      .appendField("Balance equation:");
-    this.setInputsInline(true);
-    this.setOutput(true, "EquationOutput");
-    this.setColour(230);
-    this.setTooltip("Balance a chemical equation");
-    this.setHelpUrl("");
-  }
-};
-
-Blockly.JavaScript['balance_equation'] = function(block) {
-  var equation = Blockly.JavaScript.valueToCode(block, 'EQUATION', Blockly.JavaScript.ORDER_ATOMIC);
-  var counts = countElements(equation);
-  var reactants = counts.reactants;
-  var products = counts.products;
-
-  // Check if the equation is balanced
-  var unbalancedElements = [];
-  for (var element in reactants) {
-    if (reactants[element] !== products[element]) {
-      unbalancedElements.push(element);
-    }
-  }
-
-  // Output the balanced equation or a message indicating which elements are not balanced
-  var code;
-  if (unbalancedElements.length === 0) {
-    code = JSON.stringify({equation: equation});
-  } else {
-    code = 'The equation is not balanced. Unbalanced elements: ' + unbalancedElements.join(', ');
-  }
-
-  return [code, Blockly.JavaScript.ORDER_ATOMIC];
-};

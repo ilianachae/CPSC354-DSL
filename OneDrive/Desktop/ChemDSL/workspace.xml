@@ -6,6 +6,7 @@
   <block type="reactants_or_products"></block>
   <block type="chemical_equation">
     <field name="EquationType">FORWARD</field>
+  <block type="balance_equation">
   </block>
   <!-- Include other blocks as needed -->
 </xml>
