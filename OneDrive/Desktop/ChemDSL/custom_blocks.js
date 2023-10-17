@@ -79,7 +79,6 @@ Blockly.Blocks['balance_equation'] = {
 			.setCheck("EquationOutput")
 			.appendField("EQ Balance");
 		this.setInputsInline(true);
-		this.setOutput(true, "ChemFunction");
 		this.setPreviousStatement(true, null);
 		this.setColour(230);
 		this.setTooltip("Insert a chemical equation to check for balance");
