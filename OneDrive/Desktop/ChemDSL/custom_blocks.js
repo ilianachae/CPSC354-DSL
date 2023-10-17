@@ -256,7 +256,19 @@ function balanceEquation(equation) {
 }
 
 function countElements(molecule) {
-  // This function should return a dictionary where the keys are elements and the values are their counts in the molecule
+  var elementCounts = {};
+  var elementArray = molecule.match(/([A-Z][a-z]*)(\d*)/g);
+  elementArray.forEach(function(element) {
+    var matches = element.match(/([A-Z][a-z]*)(\d*)/);
+    var elementName = matches[1];
+    var count = parseInt(matches[2]) || 1;
+    if (elementCounts[elementName]) {
+      elementCounts[elementName] += count;
+    } else {
+      elementCounts[elementName] = count;
+    }
+  });
+  return elementCounts;
 }
 
 function solveLinearEquations(equations) {
