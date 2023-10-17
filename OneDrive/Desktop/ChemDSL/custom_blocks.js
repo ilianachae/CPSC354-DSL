@@ -162,14 +162,14 @@ Blockly.JavaScript['balance_equation'] = function(block) {
   }
 
   // Output the balanced equation or a JavaScript object indicating which elements are not balanced
-  var code;
+  var code = '';
   if (unbalancedElements.length === 0) {
-    code = '{equation: "' + equation + '"}';
+    code += 'var result = {equation: "' + equation + '"};\n';
   } else {
-    code = '{error: "The equation is not balanced. Unbalanced elements: ' + unbalancedElements.join(', ') + '"}';
+    code += 'var result = {error: "The equation is not balanced. Unbalanced elements: ' + unbalancedElements.join(', ') + '"};\n';
   }
 
-  return [code, Blockly.JavaScript.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.JavaScript['demo_function'] = function(block) {
