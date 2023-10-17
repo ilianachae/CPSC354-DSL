@@ -45,7 +45,8 @@
 
         function generateCode() {
             var code = Blockly.JavaScript.workspaceToCode(workspace);
-            document.getElementById('codeDiv').innerText = code;
+            var result = balanceEquation(code);
+            document.getElementById('codeDiv').innerText = result;
         }
 
         // function generateCode() {
