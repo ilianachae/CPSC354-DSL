@@ -272,5 +272,21 @@ function countElements(molecule) {
 }
 
 function solveLinearEquations(equations) {
-  // This function should solve the system of linear equations and return the solution as a list of coefficients
+  // Convert the equations to the format required by math.lusolve
+  var A = equations.map(function(equation) {
+    return equation.slice(0, -1);
+  });
+  var b = equations.map(function(equation) {
+    return equation[equation.length - 1];
+  });
+
+  // Solve the system of linear equations
+  var solution = math.lusolve(A, b);
+
+  // Convert the solution to the format required by the balanceEquation function
+  var coefficients = solution.map(function(value) {
+    return value[0];
+  });
+
+  return coefficients;
 }
