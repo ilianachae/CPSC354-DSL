@@ -79,9 +79,21 @@ Blockly.Blocks['balance_equation'] = {
 			.setCheck("EquationOutput")
 			.appendField("EQ Balance");
 		this.setInputsInline(true);
-		this.setPreviousStatement(true, "ChemFunction");
+		this.setOutput(true, "ChemFunction");
 		this.setColour(230);
 		this.setTooltip("Insert a chemical equation to check for balance");
+		this.setHelpUrl("");
+	}
+};
+
+Blockly.Blocks['demo_function'] = {
+	init: function() {
+		this.appendStatementInput("NAME")
+			.setCheck("ChemFunction");
+		this.setInputsInline(false);
+		this.setPreviousStatement(true, null);
+		this.setColour(230);
+		this.setTooltip("Dummy Test Function");
 		this.setHelpUrl("");
 	}
 };
@@ -136,7 +148,7 @@ Blockly.JavaScript['chemical_equation'] = function(block) {
 };
 
 Blockly.JavaScript['balance_equation'] = function(block) {
-  var equation = Blockly.JavaScript.valueToCode(block, 'EQUATION', Blockly.JavaScript.ORDER_ATOMIC);
+  var equation = Blockly.JavaScript.valueToCode(block, 'BALANCEDEQUATION', Blockly.JavaScript.ORDER_ATOMIC);
   var counts = countElements(equation);
   var reactants = counts.reactants;
   var products = counts.products;
@@ -158,6 +170,12 @@ Blockly.JavaScript['balance_equation'] = function(block) {
   }
 
   return [code, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
+Blockly.JavaScript['demo_function'] = function(block) {
+	var contents = Blockly.JavaScript.valueToCode(block, 'REACTANTS', Blockly.JavaScript.ORDER_ATOMIC);
+	var code = "This is how a function would work on: " + contents;
+  	return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
 /* Put more custom blocks here */

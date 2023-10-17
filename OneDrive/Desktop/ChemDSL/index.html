@@ -23,6 +23,7 @@
             </category>
             <category name="Equation Functions">
             <block type="balance_equation"></block>
+            <block type="demo_function"></block>
             </category>
         </xml>
     </div>
@@ -43,9 +44,14 @@
 
         function generateCode() {
             var code = Blockly.JavaScript.workspaceToCode(workspace);
-            var jsonCode = JSON.stringify({code: code});
-            document.getElementById('codeDiv').innerText = jsonCode;
+            document.getElementById('codeDiv').innerText = code;
         }
+
+        // function generateCode() {
+        //     var code = Blockly.JavaScript.workspaceToCode(workspace);
+        //     var jsonCode = JSON.stringify({code: code});
+        //     document.getElementById('codeDiv').innerText = jsonCode;
+        // }
 
         function saveCode() {
             var code = Blockly.JavaScript.workspaceToCode(workspace);
