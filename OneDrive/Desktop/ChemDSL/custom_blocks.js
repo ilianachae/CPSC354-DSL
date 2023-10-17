@@ -206,38 +206,59 @@ var workspaceBlocks = document.getElementById("toolbox");
 
 Blockly.Xml.domToWorkspace(workspaceBlocks, workspace);
 */
-function countElements(equation) {
+function balanceEquation(equation) {
+  // Parse the equation
   var sides = equation.split('=>');
   var reactants = sides[0].split('+');
   var products = sides[1].split('+');
 
-  var reactantCounts = {};
-  var productCounts = {};
-
+  // Set up the system of linear equations
+  var equations = [];
+  var elements = new Set();
   reactants.forEach(function(reactant) {
-    var elements = reactant.match(/[A-Z][a-z]*/g);
-    elements.forEach(function(element) {
-      if (reactantCounts[element]) {
-        reactantCounts[element]++;
-      } else {
-        reactantCounts[element] = 1;
-      }
-    });
+    var counts = countElements(reactant);
+    for (var element in counts) {
+      elements.add(element);
+    }
   });
-
   products.forEach(function(product) {
-    var elements = product.match(/[A-Z][a-z]*/g);
-    elements.forEach(function(element) {
-      if (productCounts[element]) {
-        productCounts[element]++;
-      } else {
-        productCounts[element] = 1;
-      }
+    var counts = countElements(product);
+    for (var element in counts) {
+      elements.add(element);
+    }
+  });
+  elements.forEach(function(element) {
+    var equation = [];
+    reactants.forEach(function(reactant) {
+      var counts = countElements(reactant);
+      equation.push(counts[element] || 0);
     });
+    products.forEach(function(product) {
+      var counts = countElements(product);
+      equation.push(-(counts[element] || 0));
+    });
+    equations.push(equation);
   });
 
-  return {
-    reactants: reactantCounts,
-    products: productCounts
-  };
+  // Solve the system of linear equations
+  var coefficients = solveLinearEquations(equations);
+
+  // Return the balanced equation
+  var balancedEquation = '';
+  reactants.forEach(function(reactant, i) {
+    balancedEquation += (i > 0 ? ' + ' : '') + coefficients[i] + reactant;
+  });
+  balancedEquation += ' => ';
+  products.forEach(function(product, i) {
+    balancedEquation += (i > 0 ? ' + ' : '') + coefficients[reactants.length + i] + product;
+  });
+  return balancedEquation;
+}
+
+function countElements(molecule) {
+  // This function should return a dictionary where the keys are elements and the values are their counts in the molecule
+}
+
+function solveLinearEquations(equations) {
+  // This function should solve the system of linear equations and return the solution as a list of coefficients
 }
