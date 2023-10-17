@@ -44,8 +44,14 @@
         });
 
         function generateCode() {
+            var topBlocks = workspace.getTopBlocks();
             var code = Blockly.JavaScript.workspaceToCode(workspace);
-            var result = balanceEquation(code);
+            var result;
+            if (topBlocks.length > 0 && topBlocks[0].type === 'balance_equation') {
+                result = balanceEquation(code);
+            } else {
+                result = code;
+            }
             document.getElementById('codeDiv').innerText = result;
         }
 
