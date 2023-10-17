@@ -283,6 +283,13 @@ function solveLinearEquations(equations) {
   // Solve the system of linear equations
   var solution = math.lusolve(A, b);
 
+  // Check if the solution contains only positive integers
+  for (var i = 0; i < solution.length; i++) {
+    if (solution[i][0] <= 0 || !Number.isInteger(solution[i][0])) {
+      throw new Error('The equation cannot be balanced.');
+    }
+  }
+
   // Convert the solution to the format required by the balanceEquation function
   var coefficients = solution.map(function(value) {
     return value[0];
