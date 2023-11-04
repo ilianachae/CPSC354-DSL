@@ -155,6 +155,24 @@ Blockly.JavaScript['balance_equation'] = function(block) {
   var reactants = counts.reactants;
   var products = counts.products;
 
+  // Verify the elements
+  var invalidElements = [];
+  for (var element in reactants) {
+    if (!elements[element]) {
+      invalidElements.push(element);
+    }
+  }
+  for (var element in products) {
+    if (!elements[element]) {
+      invalidElements.push(element);
+    }
+  }
+
+  // If there are invalid elements, return them
+  if (invalidElements.length > 0) {
+    return 'Invalid elements: ' + invalidElements.join(', ');
+  }
+
   // Check if the equation is balanced
   var unbalancedElements = [];
   for (var element in reactants) {
