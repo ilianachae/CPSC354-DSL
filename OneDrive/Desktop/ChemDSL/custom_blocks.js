@@ -1,5 +1,7 @@
+import elements from './elements.json'
+
 /* Define custom blocks using Blockly.Blocks object */
-  
+
 Blockly.Blocks['element_symbol'] = {
 	init: function() {
 		this.appendDummyInput()
@@ -297,3 +299,16 @@ function solveLinearEquations(equations) {
 
   return coefficients;
 }
+
+// Function to get the molar mass of an element
+function getMolarMass(elementSymbol) {
+  if (elements[elementSymbol]) {
+    return elements[elementSymbol].molarMass;
+  } else {
+    return null; // Handle the case where the element is not found
+  }
+}
+
+// Example usage
+var hydrogenMolarMass = getMolarMass("H");
+console.log("Molar Mass of Hydrogen:", hydrogenMolarMass);
