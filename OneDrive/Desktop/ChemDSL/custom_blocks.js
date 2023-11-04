@@ -155,7 +155,7 @@ Blockly.JavaScript['balance_equation'] = function(block) {
   var reactants = counts.reactants;
   var products = counts.products;
 
-  // Verify the elements
+  // Make sure that each element is valid
   var invalidElements = [];
   for (var element in reactants) {
     if (!elements[element]) {
@@ -168,7 +168,7 @@ Blockly.JavaScript['balance_equation'] = function(block) {
     }
   }
 
-  // If there are invalid elements, return them
+  // Return invalid elements to be outputted to user to fix.
   if (invalidElements.length > 0) {
     return 'Invalid elements: ' + invalidElements.join(', ');
   }
