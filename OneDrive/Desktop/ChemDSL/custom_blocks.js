@@ -1,5 +1,3 @@
-import elements from './elements.json'
-
 /* Define custom blocks using Blockly.Blocks object */
 
 Blockly.Blocks['element_symbol'] = {
