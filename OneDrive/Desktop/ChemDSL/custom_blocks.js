@@ -7,7 +7,7 @@ Blockly.Blocks['element_symbol'] = {
 		this.appendDummyInput()
 		  .appendField("Element: ") /* Name that appears on block piece */
 		  .appendField(new Blockly.FieldTextInput("H"), "NAME");
-		this.setInputsInline(true);
+		this.setInputsInline(true, "String");
 		this.setOutput(true, "Element"); /* output type to allow block connections */
 		this.setColour(120);
 		this.setTooltip("Enter the chemical symbol for the desired element");
@@ -140,7 +140,7 @@ Blockly.JavaScript['chemical_equation'] = function(block) {
   
   // Check if reactants and products are empty
   if (!reactants || !products) {
-    return '';
+    return 'Equation incomplete';
   }
   
   // Format the chemical equation string
@@ -227,7 +227,7 @@ var workspaceBlocks = document.getElementById("toolbox");
 Blockly.Xml.domToWorkspace(workspaceBlocks, workspace);
 */
 function balanceEquation(equation) {
-  // Parse the equation
+  // Equation parsing
   var sides = equation.split('=>');
   var reactants = sides[0].split('+');
   var products = sides[1].split('+');
@@ -255,7 +255,7 @@ function balanceEquation(equation) {
     });
     products.forEach(function(product) {
       var counts = countElements(product);
-      equation.push(-(counts[element] || 0));
+      equation.push((counts[element] || 0));
     });
     equations.push(equation);
   });
