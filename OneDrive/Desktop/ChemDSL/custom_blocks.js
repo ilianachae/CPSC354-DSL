@@ -1,4 +1,5 @@
 import elements from './elements.json'
+import * as math from 'mathjs'
 
 /* Define custom blocks using Blockly.Blocks object */
 
