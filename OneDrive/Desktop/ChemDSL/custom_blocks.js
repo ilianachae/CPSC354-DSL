@@ -293,7 +293,7 @@ function countElements(molecule) {
 }
 
 function solveLinearEquations(equations) {
-  // Convert the equations to the format required by math.lusolve
+  // Convert the equations to the format required by numeric.solveLU
   var A = equations.map(function(equation) {
     return equation.slice(0, -1);
   });
@@ -302,21 +302,17 @@ function solveLinearEquations(equations) {
   });
 
   // Solve the system of linear equations
-  var solution = math.lusolve(A, b);
+  var LU = numeric.LU(A);
+  var solution = numeric.solveLU(LU, b);
 
   // Check if the solution contains only positive integers
   for (var i = 0; i < solution.length; i++) {
-    if (solution[i][0] <= 0 || !Number.isInteger(solution[i][0])) {
+    if (solution[i] <= 0 || !Number.isInteger(solution[i])) {
       throw new Error('The equation cannot be balanced.');
     }
   }
 
-  // Convert the solution to the format required by the balanceEquation function
-  var coefficients = solution.map(function(value) {
-    return value[0];
-  });
-
-  return coefficients;
+  return solution;
 }
 
 // Function to get the molar mass of an element
