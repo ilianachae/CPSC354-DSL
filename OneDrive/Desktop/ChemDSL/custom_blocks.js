@@ -330,3 +330,18 @@ function getMolarMass(elementSymbol) {
 // Example usage
 var hydrogenMolarMass = getMolarMass("H");
 console.log("Molar Mass of Hydrogen:", hydrogenMolarMass);
+function countElements(molecule) {
+  var elementCounts = {};
+  var elementArray = molecule.match(/\(([A-Z][a-z]*)(\d*)\)/g);
+  elementArray.forEach(function(element) {
+    var matches = element.match(/\(([A-Z][a-z]*)(\d*)\)/);
+    var elementName = matches[1];
+    var count = parseInt(matches[2]) || 1;
+    if (elementCounts[elementName]) {
+      elementCounts[elementName] += count;
+    } else {
+      elementCounts[elementName] = count;
+    }
+  });
+  return elementCounts;
+}
