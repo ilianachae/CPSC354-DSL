@@ -339,3 +339,9 @@ function countElements(molecule) {
   });
   return elementCounts;
 }
+
+// Fetch elements.json
+var elements;
+fetch('./elements.json')
+  .then(response => response.json())
+  .then(data => elements = data);
