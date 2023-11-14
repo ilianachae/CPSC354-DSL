@@ -224,54 +224,54 @@ var workspaceBlocks = document.getElementById("toolbox");
 
 Blockly.Xml.domToWorkspace(workspaceBlocks, workspace);
 */
-function balanceEquation(equation) {
-  // Equation parsing
-  var sides = equation.split('=>');
-  var reactants = sides[0].split('+');
-  var products = sides[1].split('+');
+// function balanceEquation(equation) {
+//   // Equation parsing
+//   var sides = equation.split('=>');
+//   var reactants = sides[0].split('+');
+//   var products = sides[1].split('+');
 
-  // Set up the system of linear equations
-  var equations = [];
-  var elements = new Set();
-  reactants.forEach(function(reactant) {
-    var counts = countElements(reactant);
-    for (var element in counts) {
-      elements.add(element);
-    }
-  });
-  products.forEach(function(product) {
-    var counts = countElements(product);
-    for (var element in counts) {
-      elements.add(element);
-    }
-  });
-  elements.forEach(function(element) {
-    var equation = [];
-    reactants.forEach(function(reactant) {
-      var counts = countElements(reactant);
-      equation.push(counts[element] || 0);
-    });
-    products.forEach(function(product) {
-      var counts = countElements(product);
-      equation.push((counts[element] || 0));
-    });
-    equations.push(equation);
-  });
+//   // Set up the system of linear equations
+//   var equations = [];
+//   var equation_elements = new Set();
+//   reactants.forEach(function(reactant) {
+//     var counts = countElements(reactant);
+//     for (var element in counts) {
+//       equation_elements.add(element);
+//     }
+//   });
+//   products.forEach(function(product) {
+//     var counts = countElements(product);
+//     for (var element in counts) {
+//       equation_elements.add(element);
+//     }
+//   });
+//   elements.forEach(function(element) {
+//     var equation = [];
+//     reactants.forEach(function(reactant) {
+//       var counts = countElements(reactant);
+//       equation.push(counts[element] || 0);
+//     });
+//     products.forEach(function(product) {
+//       var counts = countElements(product);
+//       equation.push((counts[element] || 0));
+//     });
+//     equations.push(equation);
+//   });
 
-  // Solve the system of linear equations
-  var coefficients = solveLinearEquations(equations);
+//   // Solve the system of linear equations
+//   var coefficients = solveLinearEquations(equations);
 
-  // Return the balanced equation
-  var balancedEquation = '';
-  reactants.forEach(function(reactant, i) {
-    balancedEquation += (i > 0 ? ' + ' : '') + coefficients[i] + reactant;
-  });
-  balancedEquation += ' => ';
-  products.forEach(function(product, i) {
-    balancedEquation += (i > 0 ? ' + ' : '') + coefficients[reactants.length + i] + product;
-  });
-  return balancedEquation;
-}
+//   // Return the balanced equation
+//   var balancedEquation = '';
+//   reactants.forEach(function(reactant, i) {
+//     balancedEquation += (i > 0 ? ' + ' : '') + coefficients[i] + reactant;
+//   });
+//   balancedEquation += ' => ';
+//   products.forEach(function(product, i) {
+//     balancedEquation += (i > 0 ? ' + ' : '') + coefficients[reactants.length + i] + product;
+//   });
+//   return balancedEquation;
+// }
 
 function countElements(molecule) {
   var elementCounts = {};
@@ -322,8 +322,8 @@ function getMolarMass(elementSymbol) {
 }
 
 // Example usage
-var hydrogenMolarMass = getMolarMass("H");
-console.log("Molar Mass of Hydrogen:", hydrogenMolarMass);
+// var hydrogenMolarMass = getMolarMass("H");
+// console.log("Molar Mass of Hydrogen:", hydrogenMolarMass);
 function countElements(molecule) {
   var elementCounts = {};
   var elementArray = molecule.match(/\(([A-Z][a-z]*)(\d*)\)/g);
@@ -341,7 +341,9 @@ function countElements(molecule) {
 }
 
 // Fetch elements.json
-var elements;
-fetch('./elements.json')
-  .then(response => response.json())
-  .then(data => elements = data);
+// Method using fetch API
+// https://www.freecodecamp.org/news/how-to-read-json-file-in-javascript/
+// var elements;
+// fetch('./elements.json')
+//   .then(response => response.json())
+//   .then(data => elements = data);
