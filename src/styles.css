@@ -29,6 +29,35 @@ body, html {
     background-color: #fff; /* White background color */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
+.laboratory-shelf {
+    background-color: #bfbfbf; /* Grey background for the laboratory shelf */
+    border: 1px solid #666; /* Dark border for the laboratory shelf */
+    padding: 10px;
+}
+.left-sections {
+    background-color: #e6f7ff; /* Light blue background for the left sections */
+    border: 1px solid #99c2ff; /* Border color for the left sections */
+    padding: 10px;
+}
+.button-row {
+    height: 50px; /* or whatever height you want */
+    justify-content: flex-start;
+    background-color: #3498db; /* Green background color for buttons */
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+.button-row button {
+    background-color: #fff; /* White button background color */
+    color: #3498db; /* Green button text color */
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.button-row button:hover {
+    background-color: #e4e4e4; /* Light background color on hover */
+}
 
 #outputDiv {
     position: relative; /* Set to relative to position children absolutely within it */
@@ -53,25 +82,4 @@ body, html {
 #sketcher {
     border: none; /* Remove the border */
     display: none; /* Hide the canvas initially */
-}
-.button-row {
-    height: 50px; /* or whatever height you want */
-    justify-content: flex-start;
-    background-color: #4CAF50; /* Green background color for buttons */
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-}
-
-.button-row button {
-    background-color: #fff; /* White button background color */
-    color: #4CAF50; /* Green button text color */
-    border: none;
-    padding: 10px 20px;
-    margin-right: 10px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.button-row button:hover {
-    background-color: #e4e4e4; /* Light background color on hover */
 }
