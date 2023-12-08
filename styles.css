@@ -42,7 +42,6 @@ body, html {
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     background-color: #dfe6e9; /* Light blue background for code and output divs */
-    margin-top: 10px; /* Add margin at the top */
     padding: 10px; /* Add padding to the code and output divs */
 }
 
