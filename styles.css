@@ -36,13 +36,12 @@ body, html {
     padding: 10px;
 }
 
-#outputDiv {
+#outputDiv, #codeDiv {
     position: relative; /* Set to relative to position children absolutely within it */
     display: flex; /* Use flexbox to center the canvas */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     background-color: #dfe6e9; /* Light blue background for code and output divs */
-    padding: 10px; /* Add padding to the code and output divs */
 }
 
 #messageArea {
