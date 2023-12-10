@@ -14,7 +14,7 @@ The program uses JavaScript variables and functions to implement the equation of
 
 * You can type a chemical symbol (H, He, Li, Be) in the element block.
 * You can enter any integer greater than 2 into the coefficient block and insert an element or compound into it.
- * Elements and compounds without coefficients are treated as if they have a coefficient of 1, which is omitted when printing. 
+* Elements and compounds without coefficients are treated as if they have a coefficient of 1, which is omitted when printing. 
 * You can create a compound by inserting element blocks or compound blocks into the compound block. 
 
 #### Example for creating elements and compounds
