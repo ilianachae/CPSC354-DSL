@@ -9,7 +9,7 @@
 ## Blockly Program
 
 * What the project is about [Video 1](https://github.com/ilianachae/CPSC354-DSL/tree/main/docs)
-* Technical introduction [Video 2]()
+* Technical introduction [Video 2](https://youtu.be/vulkog4fGq8)
 * [Program](https://ilianachae.github.io/CPSC354-DSL/)
 * [Source](https://github.com/ilianachae/CPSC354-DSL/tree/main/src)
 
