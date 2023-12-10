@@ -5,6 +5,7 @@ var xmlString = '<xml xmlns="https://developers.google.com/blockly/xml">' +
   '<value name="Element1"><block type="ch4"></block></value>' +
   '<value name="Element2"><block type="element_coefficient" id="_OOsz0y!G?ZALI6*!p:0"><field name="NUMBER">2</field>' +
   '<value name="COEFFICIENT"><block type="o2" id="~y[MCf2?m(5ttw;tYt+z"></block></value></block></value>' +
+  '</block></value>' +
 
   '<field name="EquationType">=></field>' + 
   
