@@ -4,11 +4,13 @@ body, html {
     padding: 0;
     display: flex;
     flex-direction: column;
+    background-color: #f3f3f3; /* Light background color */
+    font-family: 'Arial', sans-serif;
 }
 .row {
     display: flex;
     justify-content: space-between;
-    height: 50vh; /* Take up half the height of the viewport */
+    height: calc(100vh - 100px); /* Extend to the bottom minus the header and button row heights */
 }
 .full-width {
     width: 100%;
@@ -16,15 +18,68 @@ body, html {
     max-height: 600px;
     overflow: auto; /* Add a scrollbar when necessary */
     background-color: #f0f0f0; /* Light grey background to make it visible */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 .half-width {
     width: 49%;
-    height: 200px;
+    height: 200px; /* Adjust height as needed for ChemDoodle canvas */
     border: 10px solid rgb(190, 26, 26);
     padding: 10px;
     overflow: auto;
+    background-color: #fff; /* White background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+.laboratory-shelf {
+    background-color: #bfbfbf; /* Grey background for the laboratory shelf */
+    border: 1px solid #666; /* Dark border for the laboratory shelf */
+    padding: 10px;
+}
+.left-sections {
+    background-color: #e6f7ff; /* Light blue background for the left sections */
+    border: 1px solid #99c2ff; /* Border color for the left sections */
+    padding: 10px;
 }
 .button-row {
     height: 50px; /* or whatever height you want */
     justify-content: flex-start;
+    background-color: #3498db; /* Green background color for buttons */
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+.button-row button {
+    background-color: #fff; /* White button background color */
+    color: #3498db; /* Green button text color */
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.button-row button:hover {
+    background-color: #e4e4e4; /* Light background color on hover */
+}
+
+#outputDiv {
+    position: relative; /* Set to relative to position children absolutely within it */
+    display: flex; /* Use flexbox to center the canvas */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+#messageArea {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 10;
+    text-align: center; /* Center the text within the message area */
+    width: calc(100% - 20px); /* Full width minus padding */
+}
+
+#sketcher {
+    border: none; /* Remove the border */
+    display: none; /* Hide the canvas initially */
 }

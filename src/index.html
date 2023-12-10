@@ -3,11 +3,14 @@
 <head>
     <title>General Chemistry DSL</title>
     <script src="https://unpkg.com/blockly/blockly.min.js"></script>
+    <script src="elements.js"></script>
     <script src="custom_blocks.js"></script>
+    <link rel="stylesheet" href="./ChemDoodleWeb.css" type="text/css">
+    <script type="text/javascript" src="./ChemDoodleWeb.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <div class="row">
+    <div class="row laboratory-shelf">
         <div id="blocklyDiv" class="full-width"></div>
         <xml id="toolbox" style="display: none">
             <category name="Element Builder">
@@ -15,11 +18,27 @@
                 <block type="element_coefficient"></block>
                 <block type="compound"></block>
             </category>
+            <category name="Common Compounds">
+                <block type="h2o"></block>
+                <block type="o2"></block>
+                <block type="co2"></block>
+                <block type="nh3"></block>
+                <block type="ch4"></block>
+                <block type="hcl"></block>
+                <block type="ch3cooh"></block>
+                <block type="c6h6"></block>
+                <block type="doodledemo"></block>
+            </category>
             <category name="Equation Builder">
             <block type="reactants_or_products"></block>
             <block type="chemical_equation">
-                <field name="EquationType">FORWARD</field>
+                <field name="EquationType">=></field>
             </block>
+            </category>
+            <category name="Functions">
+                <block type="molar_masses"></block>
+                <block type="check_balance"></block>
+                <block type="chemdoodle"></block>
             </category>
         </xml>
     </div>
@@ -27,16 +46,42 @@
         <button onclick="generateCode()">Generate Code</button>
         <button onclick="saveCode()">Save Code</button>
         <button onclick="viewSource()">View GitHub</button>
+        <button onclick="doodleMolecule()">Doodle Molecule</button>
     </div>
     <div class="row">
         <div id="codeDiv" class="half-width"></div>
-        <div id="outputDiv" class="half-width"></div>
+        <div id="outputDiv" class="half-width">
+            <canvas id="sketcher" width="400" height="400"></canvas>
+            <div id="messageArea"></div>
+            <!-- Include additional ChemDoodle initialization scripts here-->
+        </div>
     </div>
     <script>
         var workspace = Blockly.inject('blocklyDiv', {
             toolbox: document.getElementById('toolbox'),
             scrollbars: true
         });
+
+        function doodleMolecule() {
+            // Find all blocks that are of type 'chemdoodle' and check if they are connected
+            var blocks = workspace.getAllBlocks();
+            var chemDoodleBlock = blocks.find(block => block.type === 'chemdoodle');
+            let myCanvas = new ChemDoodle.ViewerCanvas('sketcher', 400, 400);
+            if (chemDoodleBlock && chemDoodleBlock.getInputTargetBlock('Compound')) {
+                myCanvas.emptyMessage = 'No Data Loaded!';
+                let caffeineMolFile = 'Molecule Name\n  CHEMDOOD08070920033D 0   0.00000     0.00000     0\n[Insert Comment Here]\n 14 15  0  0  0  0  0  0  0  0  1 V2000\n   -0.3318    2.0000    0.0000   O 0  0  0  1  0  0  0  0  0  0  0  0\n   -0.3318    1.0000    0.0000   C 0  0  0  1  0  0  0  0  0  0  0  0\n   -1.1980    0.5000    0.0000   N 0  0  0  1  0  0  0  0  0  0  0  0\n    0.5342    0.5000    0.0000   C 0  0  0  1  0  0  0  0  0  0  0  0\n   -1.1980   -0.5000    0.0000   C 0  0  0  1  0  0  0  0  0  0  0  0\n   -2.0640    1.0000    0.0000   C 0  0  0  4  0  0  0  0  0  0  0  0\n    1.4804    0.8047    0.0000   N 0  0  0  1  0  0  0  0  0  0  0  0\n    0.5342   -0.5000    0.0000   C 0  0  0  1  0  0  0  0  0  0  0  0\n   -2.0640   -1.0000    0.0000   O 0  0  0  1  0  0  0  0  0  0  0  0\n   -0.3318   -1.0000    0.0000   N 0  0  0  1  0  0  0  0  0  0  0  0\n    2.0640   -0.0000    0.0000   C 0  0  0  2  0  0  0  0  0  0  0  0\n    1.7910    1.7553    0.0000   C 0  0  0  4  0  0  0  0  0  0  0  0\n    1.4804   -0.8047    0.0000   N 0  0  0  1  0  0  0  0  0  0  0  0\n   -0.3318   -2.0000    0.0000   C 0  0  0  4  0  0  0  0  0  0  0  0\n  1  2  2  0  0  0  0\n  3  2  1  0  0  0  0\n  4  2  1  0  0  0  0\n  3  5  1  0  0  0  0\n  3  6  1  0  0  0  0\n  7  4  1  0  0  0  0\n  4  8  2  0  0  0  0\n  9  5  2  0  0  0  0\n 10  5  1  0  0  0  0\n 10  8  1  0  0  0  0\n  7 11  1  0  0  0  0\n  7 12  1  0  0  0  0\n 13  8  1  0  0  0  0\n 13 11  2  0  0  0  0\n 10 14  1  0  0  0  0\nM  END\n> <DATE>\n07-08-2009\n';
+                let caffeine = ChemDoodle.readMOL(caffeineMolFile);
+                myCanvas.loadMolecule(caffeine);
+                document.getElementById('sketcher').style.display = 'block'; // Show the canvas
+                document.getElementById('messageArea').innerText = 'Molecule: Caffeine (C8H10N4O2)';
+                console.log('Doodling the molecule in ChemDoodle workspace.');
+            } else {
+                var message = 'Invalid Connection to Doodle.\nYou need a ChemDoodle block with a compound in the workspace!';
+                myCanvas.repaint();
+                console.log(message);
+                document.getElementById('messageArea').innerText = message;
+            }
+        }
 
         function generateCode() {
             var code = Blockly.JavaScript.workspaceToCode(workspace);
@@ -47,7 +92,7 @@
             var code = Blockly.JavaScript.workspaceToCode(workspace);
             var blob = new Blob([code], { type: 'text/javascript' });
             var a = document.createElement('a');
-            a.download = 'generatedCode.js'; // File Name
+            a.download = 'generatedCode.js'; // Downloaded File Name
             a.href = URL.createObjectURL(blob);
             a.click();
         }
