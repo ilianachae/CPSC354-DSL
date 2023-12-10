@@ -8,8 +8,6 @@ var xmlString = '<xml xmlns="https://developers.google.com/blockly/xml">' +
   '</block>' +
   '</xml>';
 
-// '<block type=""></block>' +
-
 var parser = new DOMParser();
 var xmlDoc = parser.parseFromString(xmlString, "text/xml");
 var serializer = new XMLSerializer();
