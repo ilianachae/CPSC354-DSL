@@ -8,8 +8,8 @@
 
 ## Blockly Program
 
-* [Video 1]()
-* [Video 2]()
+* What the project is about [Video 1]()
+* Technical introduction [Video 2]()
 * [Program](https://ilianachae.github.io/CPSC354-DSL/)
 * [Source](https://github.com/ilianachae/CPSC354-DSL/tree/main/milestone1/design-blocks)
 
