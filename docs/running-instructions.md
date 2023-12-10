@@ -1,7 +1,7 @@
 # Instructions for running the project
 
 ## Presentation
-View a powerpoint presentation regarding the project [here](https://docs.google.com/presentation/d/1HfpvlxIXDG2GBLlXe_3FHCobishMmQMX5mJrZWaJhj0/edit?usp=sharing) if you need context.
+View a powerpoint presentation regarding the project [here](https://docs.google.com/presentation/d/1HfpvlxIXDG2GBLlXe_3FHCobishMmQMX5mJrZWaJhj0/edit?usp=sharing) if you want context into the project.
 
 ## Demo Link
 Go to the [Demo Site](https://ilianachae.github.io/CPSC354-DSL/) to start ChemDSL'ing.
