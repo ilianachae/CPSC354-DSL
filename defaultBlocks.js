@@ -43,8 +43,6 @@ var xmlString = '<xml xmlns="https://developers.google.com/blockly/xml">
 </block>
 </xml>';
 
-<value name="REACTANTS"></>
-</xml>';
 var parser = new DOMParser();
 var xmlDoc = parser.parseFromString(xmlString, "text/xml");
 var serializer = new XMLSerializer();
