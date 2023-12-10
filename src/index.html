@@ -5,6 +5,7 @@
     <script src="https://unpkg.com/blockly/blockly.min.js"></script>
     <script src="elements.js"></script>
     <script src="custom_blocks.js"></script>
+    <script src="defaultBlocks.js"></script>
     <link rel="stylesheet" href="./ChemDoodleWeb.css" type="text/css">
     <script type="text/javascript" src="./ChemDoodleWeb.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
@@ -83,6 +84,9 @@
             }
         }
 
+        var defaultBlocksDom = Blockly.utils.xml.textToDom(defaultBlocks);
+        Blockly.Xml.domToWorkspace(defaultBlocksDom, workspace);
+        
         function generateCode() {
             var code = Blockly.JavaScript.workspaceToCode(workspace);
             document.getElementById('codeDiv').innerText = code;
