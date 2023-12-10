@@ -1,6 +1,8 @@
-# CPSC354-DSL
+# General Chemistry DSL
 
 ## Introduction
+***CPSC354***
+
 **Group Project: General Chemistry DSL**
 
 **Group Members:** Iliana Chae, Andrew Kwon, Jaden Suh
