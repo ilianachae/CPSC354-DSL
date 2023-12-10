@@ -3,11 +3,15 @@ var xmlString = '<xml xmlns="https://developers.google.com/blockly/xml">' +
 
   '<value name="REACTANTS"><block type="reactants_or_products" id="7znB^lm.*76=$cfE_3rX">' +
   '<value name="Element1"><block type="ch4"></block></value>' +
-  '<value name="Element2"><block type="o2"></block></value></block></value>' +
+  '<value name="Element2"><block type="element_coefficient" id="_OOsz0y!G?ZALI6*!p:0"><field name="NUMBER">2</field>' +
+  '<value name="COEFFICIENT"><block type="o2" id="~y[MCf2?m(5ttw;tYt+z"></block></value></block></value>' +
+
   '<field name="EquationType">=></field>' + 
+  
   '<value name="PRODUCTS"><block type="reactants_or_products" id="k)Q]$^YH;K77M[S%?:31">' + 
   '<value name="Element1"><block type="co2"></block></value>' +
-  '<value name="Element2"><block type="h2o"></block></value></block></value>' +
+  '<value name="Element2"><block type="element_coefficient" id="A[Y|QmJ8,)wWo6TU-[Xt"><field name="NUMBER">2</field>' +
+  '<block type="h2o"></block></value></block></value>' +
   '</block>' +
   '</xml>';
 
