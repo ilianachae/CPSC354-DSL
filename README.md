@@ -6,10 +6,10 @@
 **Group Members:** Iliana Chae, Andrew Kwon, Jaden Suh
 
 ## Blockly Program
-[Video 1]()
-[Video 2]()
-[Program](https://ilianachae.github.io/CPSC354-DSL/)
-[Source](https://github.com/ilianachae/CPSC354-DSL/tree/main/milestone1/design-blocks)
+* [Video 1]()
+* [Video 2]()
+* [Program](https://ilianachae.github.io/CPSC354-DSL/)
+* [Source](https://github.com/ilianachae/CPSC354-DSL/tree/main/milestone1/design-blocks)
 
 ## Motivation and Description
 A crucial element in both chemistry research and education lies in the ability to comprehend and communicate the interactions among molecules of various elements. When examining a chemical equation, one can verify its balance, compute the reaction stoichiometry, and dissect the equation into partial reactions. Although chemical equations offer numerous intriguing possibilities, including visualizations, our group is currently exploring the development of a chemistry Domain-Specific Language (DSL). This DSL would initially concentrate on inputs and operations related to chemical equations.
