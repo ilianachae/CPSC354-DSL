@@ -8,10 +8,10 @@
 
 ## Blockly Program
 
-* What the project is about [Video 1]()
+* What the project is about [Video 1](https://github.com/ilianachae/CPSC354-DSL/tree/main/docs)
 * Technical introduction [Video 2]()
 * [Program](https://ilianachae.github.io/CPSC354-DSL/)
-* [Source](https://github.com/ilianachae/CPSC354-DSL/tree/main/milestone1/design-blocks)
+* [Source](https://github.com/ilianachae/CPSC354-DSL/tree/main/src)
 
 ## Motivation and Description
 
@@ -32,12 +32,13 @@ This project can be expanded in countless directions to go with any subfield of 
 ## Contributions
 
 ### Iliana Chae
-* Bugfixing for program blocks in [custom_blocks.js](https://github.com/ilianachae/CPSC354-DSL/blob/main/milestone1/design-blocks/custom_blocks.js)
 * Setting up git pages deployment and managing the git repository for [demo](https://ilianachae.github.io/CPSC354-DSL/)
 * Created the [preliminary design visual](https://github.com/ilianachae/CPSC354-DSL/blob/main/docs/preliminaryDesignVisual.png)
-* Presentation [Slides](https://docs.google.com/presentation/d/1HfpvlxIXDG2GBLlXe_3FHCobishMmQMX5mJrZWaJhj0/edit?usp=sharing)
-* Cleaned up the descriptions in and added the examples to [README.md](https://github.com/ilianachae/CPSC354-DSL/blob/main/milestone1/README.md)
+* Bugfixing for program blocks in [custom_blocks.js](https://github.com/ilianachae/CPSC354-DSL/blob/main/milestone1/design-blocks/custom_blocks.js)
+* Created the default blocks based program loaded automatically in [defaultBlocks.js](https://github.com/ilianachae/CPSC354-DSL/blob/main/src/defaultBlocks.js)
 * Visual of the overall program in [html](https://github.com/ilianachae/CPSC354-DSL/blob/main/src/index.html) and [css](https://github.com/ilianachae/CPSC354-DSL/blob/main/src/styles.css)
+* Cleaned up the descriptions in and added the examples to [README.md](https://github.com/ilianachae/CPSC354-DSL/blob/main/milestone1/README.md)
+* Presentation [Slides](https://docs.google.com/presentation/d/1HfpvlxIXDG2GBLlXe_3FHCobishMmQMX5mJrZWaJhj0/edit?usp=sharing)
  
 ### Andrew Kwon
 * Testing and bugfixing for program blocks in [custom_blocks.js](https://github.com/ilianachae/CPSC354-DSL/blob/main/milestone1/design-blocks/custom_blocks.js)
