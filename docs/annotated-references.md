@@ -16,3 +16,5 @@
 8. [Online Chemical Equation Balancer](https://www.nayuki.io/page/chemical-equation-balancer-javascript) - Served as an example of parsing chemical equations and solving them. Provided and example context-free-grammar for chemical formulas and a corresponding set of tokens with their definitions in regular expressions.
 
 9. [Periodic Table API](https://documenter.getpostman.com/view/14793990/TzmCgD9k#9d3d1bd2-3bc5-474d-8a0d-7987e659d29c) - API with simple accessors to obtain data on each element of the periodic table. API calls were not implemented but data from the API was used to create the elements.js file.
+
+10. [MOL File Anatomy](https://chem.libretexts.org/Courses/University_of_Arkansas_Little_Rock/ChemInformatics_(2017):_Chem_4399_5399/2.2:_Chemical_Representations_on_Computer:_Part_II/2.2.2:_Anatomy_of_a_MOL_file) - Describes the contents of a MOL file that will be necessary for visualization of chemical elements by ChemDoodle. 
