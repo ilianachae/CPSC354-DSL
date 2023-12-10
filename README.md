@@ -1,7 +1,6 @@
 # General Chemistry DSL
 
 ## Introduction
-***CPSC354***
 
 **Group Project: General Chemistry DSL**
 
@@ -23,6 +22,7 @@ A crucial element in both chemistry research and education lies in the ability t
 This project was created in Blockly. In this Blockly-based interface, users are able to snap blocks representing chemical elements and compounds together to create chemical equations. Just as the elements serve as the building blocks of chemistry, elements serve as the building blocks for this project. Chemical equations are separated into a left-hand side to represent the reactants, and a right-hand side to represent the products. When the equation is built, the balance check block should be applied to ensure that the equation is valid. From the balanced state, other function blocks can be attached to perform different operations on the blocks.
 
 ## Future Work
+
 
 
 ## Contributions
