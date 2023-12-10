@@ -2,10 +2,10 @@ var xmlString = '<xml xmlns="https://developers.google.com/blockly/xml">' +
   '<block type="chemical_equation" id="|*nT426^Js?MG3aO+bXD" x="68" y="78">' +
   '<field name="EquationType">=></field>' + 
   '<value name="REACTANTS"><block type="reactants_or_products"></block></value>' +
-  '<value name="Element1"><block type="ch4"></block></value><dummy name=" + "></dummy>' +
+  '<value name="Element1"><block type="ch4"></block></value>' +
   '<value name="Element2"><block type="o2"></block></value>' +
   '<value name="PRODUCTS"><block type="reactants_or_products"></block></value>' + 
-  '<value name="Element1"><block type="co2"></block></value><dummy name=" + "></dummy>' +
+  '<value name="Element1"><block type="co2"></block></value>' +
   '<value name="Element2"><block type="h2o"></block></value>' +
   '</block>' +
   '</xml>';
