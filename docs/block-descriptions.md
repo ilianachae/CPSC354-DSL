@@ -1,5 +1,7 @@
 # Description of Blocks and Their Functions
 
+For more information on specific blocks and other blocks that were originally planned to be added, check [design2.md](https://github.com/ilianachae/CPSC354-DSL/blob/main/docs/design2.md)
+
 ## Element Builder Blocks
 
 Blocks in this category are used to define elements and combine elements to form compounds. The number of each element and compound can then also be adjusted by adding a coefficient in front of them.
