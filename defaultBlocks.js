@@ -11,7 +11,7 @@ var xmlString = '<xml xmlns="https://developers.google.com/blockly/xml">' +
   '<value name="PRODUCTS"><block type="reactants_or_products" id="k)Q]$^YH;K77M[S%?:31">' + 
   '<value name="Element1"><block type="co2"></block></value>' +
   '<value name="Element2"><block type="element_coefficient" id="A[Y|QmJ8,)wWo6TU-[Xt"><field name="NUMBER">2</field>' +
-  '<block type="h2o"></block></value></block></value>' +
+  '<value name="COEFFICIENT"><block type="h2o" id="sYHQvj3I3*+5jya=0}0("></block></value></block></value>' +
   '</block>' +
   '</xml>';
 
