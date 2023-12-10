@@ -12,7 +12,7 @@ var xmlString = '<xml xmlns="https://developers.google.com/blockly/xml">' +
   '<value name="Element1"><block type="co2"></block></value>' +
   '<value name="Element2"><block type="element_coefficient" id="A[Y|QmJ8,)wWo6TU-[Xt"><field name="NUMBER">2</field>' +
   '<value name="COEFFICIENT"><block type="h2o" id="sYHQvj3I3*+5jya=0}0("></block></value></block></value>' +
-  '</block>' +
+  '</block></value></block>' +
   '</xml>';
 
 var parser = new DOMParser();
