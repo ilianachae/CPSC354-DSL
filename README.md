@@ -27,8 +27,8 @@ This project was created in Blockly. In this Blockly-based interface, users are 
 
 ### Iliana Chae
 * Bugfixing for program blocks in [custom_blocks.js](https://github.com/ilianachae/CPSC354-DSL/blob/main/milestone1/design-blocks/custom_blocks.js)
-* Setting up git pages deployment for [demo](https://ilianachae.github.io/CPSC354-DSL/)
-* Created the [preliminary design visual](https://github.com/ilianachae/CPSC354-DSL/blob/main/preliminaryDesignVisual.png)
+* Setting up git pages deployment and managing the git repository for [demo](https://ilianachae.github.io/CPSC354-DSL/)
+* Created the [preliminary design visual](https://github.com/ilianachae/CPSC354-DSL/blob/main/docs/preliminaryDesignVisual.png)
 * Presentation [Slides](https://docs.google.com/presentation/d/1HfpvlxIXDG2GBLlXe_3FHCobishMmQMX5mJrZWaJhj0/edit?usp=sharing)
 * Visual of the overall program in [html](https://github.com/ilianachae/CPSC354-DSL/blob/main/src/index.html) and [css](https://github.com/ilianachae/CPSC354-DSL/blob/main/src/styles.css)
  
