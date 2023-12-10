@@ -35,7 +35,7 @@ This project was created in Blockly. In this Blockly-based interface, users are 
 ### Andrew Kwon
 * Bugfixing for program blocks in [custom_blocks.js](https://github.com/ilianachae/CPSC354-DSL/blob/main/milestone1/design-blocks/custom_blocks.js)
 * Updated on How to Run and Test [README.md](https://github.com/ilianachae/CPSC354-DSL/blob/main/milestone1/README.md)
-* Presentation Presenter
+* Presenter of the Presentation
 
 ### Jaden Suh
 * Assigned project tasks to group members 
@@ -44,4 +44,4 @@ This project was created in Blockly. In this Blockly-based interface, users are 
 * Cleaned up the descriptions in and added the examples to [README.md](https://github.com/ilianachae/CPSC354-DSL/blob/main/milestone1/README.md)
 * Preliminary designs [1](https://github.com/ilianachae/CPSC354-DSL/blob/main/design.md) and [2](https://github.com/ilianachae/CPSC354-DSL/blob/main/design2.md)
 * Creation and maintenance of [demo branch](https://github.com/ilianachae/CPSC354-DSL/tree/demo)
-* Presentation Presenter
+* Presenter of the Presentation
