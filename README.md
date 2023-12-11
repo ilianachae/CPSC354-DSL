@@ -32,7 +32,7 @@ This project can be expanded in countless directions to go with any subfield of 
 ## Contributions
 
 ### Iliana Chae
-* Setting up git pages deployment and managing the git repository for [demo](https://ilianachae.github.io/CPSC354-DSL/)
+* Setting up git pages deployment and managing the git repository for [the program](https://ilianachae.github.io/CPSC354-DSL/)
 * Created the [preliminary design visual](https://github.com/ilianachae/CPSC354-DSL/blob/main/docs/preliminaryDesignVisual.png)
 * Bugfixing for program blocks in [custom_blocks.js](https://github.com/ilianachae/CPSC354-DSL/blob/main/milestone1/design-blocks/custom_blocks.js)
 * Created the default blocks based program loaded automatically in [defaultBlocks.js](https://github.com/ilianachae/CPSC354-DSL/blob/main/src/defaultBlocks.js)
