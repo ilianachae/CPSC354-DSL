@@ -8,7 +8,7 @@
 
 ## Blockly Program
 
-* What the project is about [Video 1](https://github.com/ilianachae/CPSC354-DSL/tree/main/docs)
+* What the project is about [Video 1](https://drive.google.com/file/d/136eBjGCYYQAbC0csgxiWuhP2Ke6krt91/view?usp=sharing)
 * Technical introduction [Video 2](https://youtu.be/vulkog4fGq8)
 * [Program](https://ilianachae.github.io/CPSC354-DSL/)
 * [Source](https://github.com/ilianachae/CPSC354-DSL/tree/main/src)
@@ -36,6 +36,7 @@ This project can be expanded in countless directions to go with any subfield of 
 * Created the [preliminary design visual](https://github.com/ilianachae/CPSC354-DSL/blob/main/docs/preliminaryDesignVisual.png)
 * Bugfixing for program blocks in [custom_blocks.js](https://github.com/ilianachae/CPSC354-DSL/blob/main/milestone1/design-blocks/custom_blocks.js)
 * Created the default blocks based program loaded automatically in [defaultBlocks.js](https://github.com/ilianachae/CPSC354-DSL/blob/main/src/defaultBlocks.js)
+* Created [the introduction of project video](https://github.com/ilianachae/CPSC354-DSL/blob/main/docs/About_general_chemistry_DSL.mp4)
 * Visual of the overall program in [html](https://github.com/ilianachae/CPSC354-DSL/blob/main/src/index.html) and [css](https://github.com/ilianachae/CPSC354-DSL/blob/main/src/styles.css)
 * Cleaned up the descriptions in and added the examples to [README.md](https://github.com/ilianachae/CPSC354-DSL/blob/main/milestone1/README.md)
 * Presentation [Slides](https://docs.google.com/presentation/d/1HfpvlxIXDG2GBLlXe_3FHCobishMmQMX5mJrZWaJhj0/edit?usp=sharing)
@@ -44,7 +45,7 @@ This project can be expanded in countless directions to go with any subfield of 
 * Testing and bugfixing for program blocks in [custom_blocks.js](https://github.com/ilianachae/CPSC354-DSL/blob/main/milestone1/design-blocks/custom_blocks.js)
 * Updated on How to Run and Test [README.md](https://github.com/ilianachae/CPSC354-DSL/blob/main/milestone1/README.md)
 * Created the rough draft of [preliminary design visual](https://github.com/ilianachae/CPSC354-DSL/blob/main/docs/preliminaryDesignVisual.png)
-* Presentation [Slides](https://docs.google.com/presentation/d/1HfpvlxIXDG2GBLlXe_3FHCobishMmQMX5mJrZWaJhj0/edit?usp=sharing)
+* Narration and script of [the introduction of project video](https://github.com/ilianachae/CPSC354-DSL/blob/main/docs/About_general_chemistry_DSL.mp4)
 * Presenter of the Presentation
 
 ### Jaden Suh
