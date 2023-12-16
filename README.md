@@ -46,6 +46,7 @@ This project can be expanded in countless directions to go with any subfield of 
 * Updated on How to Run and Test [README.md](https://github.com/ilianachae/CPSC354-DSL/blob/main/milestone1/README.md)
 * Created the rough draft of [preliminary design visual](https://github.com/ilianachae/CPSC354-DSL/blob/main/docs/preliminaryDesignVisual.png)
 * Narration and script of [the introduction of project video](https://github.com/ilianachae/CPSC354-DSL/blob/main/docs/About_general_chemistry_DSL.mp4)
+* Presentation [Slides](https://docs.google.com/presentation/d/1HfpvlxIXDG2GBLlXe_3FHCobishMmQMX5mJrZWaJhj0/edit?usp=sharing)
 * Presenter of the Presentation
 
 ### Jaden Suh
